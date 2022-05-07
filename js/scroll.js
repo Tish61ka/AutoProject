@@ -56,3 +56,23 @@ window.addEventListener('scroll', function() {
         document.getElementById("btn2").style.left = -20 + "%";
     }
   });
+function click1(){
+    document.getElementById("form2").style.opacity = 1;
+    document.getElementById("form1").style.opacity = 0.7;
+    document.getElementById("form2").style.zIndex = 3;
+    document.getElementById("form1").style.zIndex = 1;
+    document.getElementById("form2").style.transitionDuration = 400 + "ms";
+    document.getElementById("form1").style.transitionDuration = 400 + "ms";
+    document.getElementById("btn2").style.zIndex = 1;
+    let i = document.querySelector(".input").getAttribute('readonly') = false;
+    document.getElementById("input").removeAttribute(readonly = false);
+}
+function click2(){
+    document.getElementById("form1").style.opacity = 1;
+    document.getElementById("form2").style.opacity = 0.7;
+    document.getElementById("form1").style.zIndex = 3;
+    document.getElementById("form2").style.zIndex = 1;
+    document.getElementById("form1").style.transitionDuration = 400 + "ms";
+    document.getElementById("form2").style.transitionDuration = 400 + "ms";
+    document.getElementById("btn1").style.zIndex = 1;
+}
