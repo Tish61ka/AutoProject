@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
 }
 section{
     background-image: url(/picture/backsign.jpeg);
-    background-size: 100%;
+    background-size: cover;
     height: 100vh;
     background-repeat: no-repeat;
     padding-top: 14vw;
@@ -58,6 +58,7 @@ form{
     width: 25vw;
     height: 27vw;
     background-color: var(--main-bg-color);
+    font-size: 1.1vw;
 }
 form h2{
     font-family: 'FranclinGothic';
@@ -73,12 +74,22 @@ form input{
     background: none;
     border: 2px solid var(--main-border-color);
     padding-left: 0.5vw;
+    font-size: 0.7vw;
 }
 form button{
-    background-color: white;
+    background-color: transparent;
     margin-left: 10%;
     width: 80%;
     height: 2vw;
+    color: black;
+    font-size: 0.7vw;
+    transition: 500ms;
+    color: white;
+    border: 1px solid var(--main-border-color);
+}
+form button:hover{
+    cursor: pointer;
+    background-color: white;
     color: black;
 }
 form p{
@@ -116,3 +127,4 @@ form p{
     left: 30%;
     opacity: 0;
 }
+
