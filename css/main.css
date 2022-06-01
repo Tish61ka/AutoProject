@@ -72,11 +72,11 @@ header ul li{
     margin: auto 0;
     min-width: 20%;
     z-index: 2;
-    font-size: 1.4vw;
+    font-size: 1.3vw;
     font-family: 'BookAntiqua';
 }
 header ul li img{
-    height: 5.5vw;
+    height: 3vw;
     z-index: 2;
 }
 nav{
@@ -89,7 +89,7 @@ nav ul{
     width: 100%;
 }
 nav ul a{
-    margin: auto 1vw;
+    margin: auto 2.5vw;
     height: 2.3vw;
     background-image: linear-gradient(white, grey);
     background-position: 0% 100%;
