@@ -11,8 +11,9 @@
     <header>
         <div></div> <!-- блок для затемнения-->
         <ul>
-            <li>
+            <li class="first_li">
                 <img src="/picture/лого.png" alt="No Ethernet connection">
+                <p>Merc <br> Drive</p>
             </li>
             <li>
                 <nav>
@@ -146,9 +147,10 @@
                     </div>
                 </li>
             </ul>
-            <a href="" id="btn" class="btn animated-button thar-three"><p>Оставить заявку</p></a> 
-            <div class="modul"></div>
-            <div class="modul_window">
+            <a id="btn" class="btn animated-button thar-three" onclick="click3()"><p>Оставить заявку</p></a> 
+            <div class="modul" id="modul"></div>
+            <div class="modul_window" id="modul-window">
+                <h1 id="close-modul"><a onclick="click4()">+</a></h1>
                 <p>
                 Чтобы оставить заявку <a href="/output/sign.php">зарегистрируйтесь</a>
             </p>
@@ -179,7 +181,14 @@
                     <p>Оставьте ваш номер телефона, оператор свяжется и уточнит, на какой случай вам нужен автомобиль премиум-класса с личным водителем. Возможно, мы найдем для вас решение, которое не указано на сайте. У нашей команды многолетний опыт работы в этой отрасли, мы сделаем все возможное, чтобы помочь вам.</p>
                 </li>
             </ul>
-            <a href="/output/aplication.html" id="btn2" class="btn animated-button thar-three"><p>Свяжитесь со мной</p></a> 
+            <a id="btn2" class="btn animated-button thar-three" onclick="click3()"><p>Свяжитесь со мной</p></a> 
+            <div class="modul" id="modul"></div>
+            <div class="modul_window" id="modul-window">
+                <h1 id="close-modul"><a onclick="click4()">+</a></h1>
+                <p>
+                Чтобы оставить заявку <a href="/output/sign.php">зарегистрируйтесь</a>
+            </p>
+            </div>
         </section>
     </main>
     <footer>
@@ -206,5 +215,6 @@
     </footer>
     <a href="#" id="go1" class="go">↑</a>
     <script src="/js/scroll.js"></script>
+    
 </body>
 </html>

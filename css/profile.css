@@ -1,0 +1,375 @@
+@font-face {
+    font-family: 'BookAntiqua';
+    src: url(/fonts/ofont.ru_Book\ Antiqua.ttf);
+}
+@font-face {
+    font-family: 'FranclinGothic';
+    src: url(/fonts/FRADM.TTF);
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    z-index: 0;
+    color: var(--main-txt-color);
+}
+html{
+    scroll-behavior: smooth;   
+    overflow-x: hidden;
+}
+:root{
+    --main-bg-color: #3b3939;
+    --second-bg-color: #ECECEC;
+    --main-txt-color: #e5e5e5;
+    --second-txt-color: #3b3939;
+    --main-border-color: #acacac;
+}
+body{
+    background: var(--main-bg-color);
+    width: 100%;
+}
+body::-webkit-scrollbar {
+    width: 1vw;               
+  }
+  body::-webkit-scrollbar-track {
+    background: transparent;        
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--main-txt-color);    
+    border-radius: 20px;
+  }
+
+  /* Навигация */
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vw;
+    width: 90%;
+    z-index: 2;
+    margin: 0 auto;
+}
+header ul li{
+    margin: auto 0;
+    min-width: 20%;
+    z-index: 2;
+    font-size: 1.3vw;
+    font-family: 'BookAntiqua';
+}
+.first_li{
+    display: flex;
+    flex-direction: row;
+}
+.first_li p{
+    margin-top: 0.5vw;
+    font-family: "BookAntiqua";
+    font-size: 1.3vw;
+    margin-left: 0.9vw;
+}
+header ul li img{
+    height: 3vw;
+    z-index: 2;
+    margin-top: 0.7vw;
+}
+nav{
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+nav ul a{
+    margin: auto 2.5vw;
+    height: 2.3vw;
+    background-image: linear-gradient(white, grey);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    border-radius: 1px;
+    transition: background-size .4s;
+}
+a:hover {
+    background-size: 100% 2px;
+}
+/* Конец навигации */
+
+
+/* Начало первой секции */
+.section_between{
+    background-image: url("/picture/backheader.png");
+    height: 18vw;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* Конец первой секции */
+
+
+/* Начало второй секции */
+.small_info{
+    height: 12vw;
+    background-color: var(--second-bg-color);
+}
+.small_info_div{
+    display: flex;
+    font-display: row;
+}
+.small_info_div img{
+    margin-top: -5vw;
+    height: 10vw;
+    margin-left: 10%;
+    border-radius: 50%;
+}
+.small_info_div p{
+    color: black;
+    font-size: 1.7vw;
+    font-family: "FranclinGothic";
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+.small_info ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+    margin: 4vw auto;
+}
+.small_info ul li{
+    color: black;
+    font-family: "BookAntiqua";
+    font-size: 1.4vw;
+    z-index: 2;
+    padding-bottom: 0.7vw;
+}
+#li-1{
+    border-bottom: 0.2vw solid var(--main-border-color);
+}
+.small_info ul li:hover{
+    cursor: pointer;
+}
+.img_1{
+    height: 37vw;
+    margin-top: -6.8vw;
+    margin-left: 7.3vw;
+    transition: 400ms;
+}
+.img_2{
+    height: 37vw;
+    margin-top: -6.8vw;
+    margin-left: 31.3vw;
+}
+.img_3{
+    height: 37vw;
+    margin-top: -6.8vw;
+    margin-left: 55.8vw;
+}
+#img-2{
+    display: none;
+}
+#img-3{
+    display: none;
+}
+.img_div_1{
+    position: relative;
+    height: 32vw;
+    width: 32.6vw;
+    margin-top: -33vw;
+    margin-left: 8.3vw;
+    padding-top: 1vw;
+    background-color: #454545;
+    z-index: 3;
+    border-radius: 10%;
+}
+.img_div_2{
+    position: relative;
+    height: 32vw;
+    width: 32.6vw;
+    margin-top: -33vw;
+    margin-left: 32.3vw;
+    background-color: #454545;
+    z-index: 3;
+    border-radius: 10%;
+}
+.img_div_3{
+    position: relative;
+    height: 32vw;
+    width: 32.6vw;
+    margin-top: -33vw;
+    margin-left: 56.8vw;
+    background-color: #454545;
+    z-index: 3;
+    border-radius: 10%;
+    padding-top: 3.5vw;
+}
+.img_div_1 ul{
+    display: flex;
+    flex-direction: column;
+}
+.img_div_1 ul li{
+    margin-bottom: 1.5vw;
+    margin-left: -4vw;
+    font-size: 1.7vw;
+    width: 150%;
+    font-family: "BookAntiqua";
+    color: var(--main-txt-color);
+    border-bottom: 0.15vw solid var(--main-border-color);
+    cursor: text;
+    z-index: 4;
+}
+.img_div_2 form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vw;
+}
+.img_div_2 form input{
+    margin-top: 1.5vw;
+    font-size: 1.7vw;
+    margin-left: 3vw;
+    width: 80%;
+    font-family: "BookAntiqua";
+    color: var(--main-txt-color);
+    border: none;
+    border-bottom: 0.15vw solid var(--main-border-color);
+    cursor: text;
+    z-index: 4;
+    background: transparent;
+    box-shadow: none;
+}
+.img_div_2 form button{
+    width: 20vw;
+    height: 4vw;
+    background: transparent;
+    border: none;
+    transition-delay: 0.25s;
+    font-family: "BookAntiqua";
+    font-size: 1.2vw;
+}
+.img_div_2 form button:hover{
+    cursor: pointer;
+    color: black;
+}
+.btn {
+    position: relative;
+    width: 20vw;
+    height: 4vw;
+    cursor: pointer;
+    background: var(--main-bg-color);
+    border: 1px solid var(--main-txt-color);
+    outline: none;
+    transition: 1s ease-in-out;
+    left: 20%;
+    margin-top: 2vw;
+    padding: 0 auto;
+  }
+  .btn p{
+    margin-top: 8%;
+    text-align: center;
+    color: var(--main-txt-color);
+    transition: 0.7s;
+    font-family: "BookAntiqua";
+    font-size: 1.2vw;
+  }
+  a.animated-button.thar-three {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: 1px solid var(--main-txt-color);
+    transition: all 0.7s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  a.animated-button.thar-three:hover{
+    background: var(--main-bg-color);
+  }
+  a.animated-button.thar-three:hover > p{
+    color: var(--second-txt-color);
+  }
+  a.animated-button.thar-three:hover:before {
+    left: 0%;
+    right: auto;
+    width: 100%;
+  }
+  a.animated-button.thar-three:before{
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    background: var(--main-txt-color);
+    color: var(--second-txt-color);
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  .img_div_3 h1{
+      font-family: "FranclinGothic";
+      font-size: 1.8vw;
+      width: 80%;
+      margin-left: 3vw;
+      margin-bottom: 1vw;
+  }
+  .img_div_3 p{
+    font-family: "BookAntiqua";
+    font-size: 1.2vw;
+    width: 80%;
+    margin-left: 3vw;
+    margin-bottom: 1.5vw;
+}
+.img_div_3 a{
+    font-family: "BookAntiqua";
+    font-size: 1.2vw;
+    margin-left: 12vw;
+    text-align: center;
+    text-decoration: underline;
+}
+/* Конец второй секции */
+
+/* OPEN FOOTER*/
+footer{
+    width: 55.4%;
+    display: flex;
+    padding-left: 10%;
+    padding-bottom: 1vw;
+    justify-content: space-between;
+    margin-top: 40vw;
+}
+.logotip{
+    width: 5vw;
+    margin-bottom: 1vw;
+}
+footer div p{
+    font-family: "BookAntiqua";
+    font-size: 1.1vw;
+    margin-right: 1vw;
+}
+footer div ul{
+    display: flex;
+}
+footer div ul li{
+    display: flex;
+    flex-direction: column;
+}
+.first_li_footer{
+    margin-left: 30%;
+}
+.p_footer{
+    margin-bottom: 1vw;
+}
+footer div ul li p{
+    font-family: "BookAntiqua";
+    margin-bottom: 0.2vw;
+}
+footer div ul li a{
+    font-family: "BookAntiqua";
+    margin-bottom: 0.2vw;
+    font-size: 1.1vw;
+
+}
+.inst{
+    width: 1.5vw;
+}
+/*CLOSE FOOTER*/

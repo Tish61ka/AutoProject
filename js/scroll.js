@@ -78,3 +78,10 @@ function click2(){
     document.getElementById("btn1").style.zIndex = 1;
     document.getElementById("btn2").style.zIndex = 3;
 }
+function click3(){
+    document.getElementById("modul-window").style.transitionDuration =  1 + "s";
+    document.getElementById("modul-window").style.left = 0 + "%";
+}
+function click4(){
+    document.getElementById("modul-window").style.left = -20 + "%";
+}

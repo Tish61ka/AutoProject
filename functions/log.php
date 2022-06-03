@@ -24,7 +24,7 @@
         else{
             $_SESSION['user'] = [
             "id" => $user['id'],
-            "full_name" => $user['full_name'],
+            "name" => $user['name'],
             "login" => $user['login'],
             "email" => $user['email'],
             "avatar" => $user['avatar']

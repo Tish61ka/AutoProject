@@ -11,6 +11,24 @@
     <title>Оставить заявку</title>
 </head>
 <body>
+    <header>
+        <ul>
+            <li>
+                <a href="/output/index.php" class="first_li">
+                <img src="/picture/лого.png" alt="No Ethernet connection">
+                <p>Merc <br> Drive</p>
+                </a>    
+            </li>
+            <li>
+                <nav>
+                    <ul>
+                        <a href="/output/profile.php"><li><?=$_SESSION['user']['login']?></li></a>
+                    </ul>
+                </nav>
+            </li>
+        </ul>
+    </header>
+<div id="modul"></div>
     <section class="section_first">
         <h1>Как заказать</h1>
         <ul>
@@ -49,7 +67,7 @@
         <div>
             <h2>Оставьте заявку</h2>
             <p>Заполните форму, и менеджер позвонит вам в течении 15 минут</p>
-            <form method="POST" action="../functions/order.php">
+            <form  id="form" method="POST" action="../functions/order.php">
                <input name="name" placeholder="Имя" type="text" required>
                <input name="phone_num" placeholder="Ваш номер телефона" type="text" required>
                <input name="comment" placeholder="Коментарий (необезательно)" type="text">
@@ -62,16 +80,13 @@
                    <option value="Mercedes V Class">Mercedes V Class</option>
                    <option value="Mercedes CLS">Mercedes CLS</option>
                </select> 
-               <a href=""><button type="submit">Отправить</button></a>
+               <a><button type="submit">Отправить</button></a>
                <p>Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных
                    и соглашаетесь с политикой конфидециальности
                </p>
-               <?php 
-                if (isset($_SESSION['message_order'])){
-                    echo '<div class="alert alert-danger">' . $_SESSION['message_order'] . '</div>';
-                }
-                unset($_SESSION['message_order']);
-            ?>
+
+            
+               
             </form>
         </div>
     </section>
@@ -132,5 +147,6 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/aplication.js"></script>
 </body>
 </html>

@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'BookAntiqua';
+    src: url(/fonts/ofont.ru_Book\ Antiqua.ttf);
+}
+@font-face {
+    font-family: 'FranclinGothic';
+    src: url(/fonts/FRADM.TTF);
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    z-index: 0;
+    color: var(--main-txt-color);
+}
+html{
+    scroll-behavior: smooth;   
+    overflow-x: hidden;
+}
+:root{
+    --main-bg-color: #3b3939;
+    --second-bg-color: #ECECEC;
+    --main-txt-color: #e5e5e5;
+    --second-txt-color: #3b3939;
+    --main-border-color: #acacac;
+}
+body{
+    background: var(--main-bg-color);
+    width: 100%;
+}
+body::-webkit-scrollbar {
+    width: 1vw;               
+  }
+  body::-webkit-scrollbar-track {
+    background: transparent;        
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--main-txt-color);    
+    border-radius: 20px;
+  }
+
+  /* Навигация */
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vw;
+    width: 90%;
+    z-index: 2;
+    margin: 0 auto;
+}
+header ul li{
+    margin: auto 0;
+    min-width: 20%;
+    z-index: 2;
+    font-size: 1.3vw;
+    font-family: 'BookAntiqua';
+}
+.first_li{
+    display: flex;
+    flex-direction: row;
+}
+.first_li p{
+    margin-top: 0.5vw;
+    font-family: "BookAntiqua";
+    font-size: 1.3vw;
+    margin-left: 0.9vw;
+}
+header ul li img{
+    height: 3vw;
+    z-index: 2;
+    margin-top: 0.7vw;
+}
+nav{
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+nav ul a{
+    margin: auto 2.5vw;
+    height: 2.3vw;
+    background-image: linear-gradient(white, grey);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    border-radius: 1px;
+    transition: background-size .4s;
+}
+a:hover {
+    background-size: 100% 2px;
+}
+/* Конец навигации */
+
+
+/* Начало первой секции */
+.section_between{
+    background-image: url("/picture/backheader.png");
+    height: 18vw;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* Конец первой секции */
+
+
+/* Начало второй секции */
+.small_info{
+    height: 12vw;
+    background-color: var(--second-bg-color);
+}
+.small_info_div{
+    display: flex;
+    font-display: row;
+}
+.small_info_div img{
+    margin-top: -5vw;
+    height: 10vw;
+    margin-left: 10%;
+    border-radius: 50%;
+}
+.small_info_div p{
+    color: black;
+    font-size: 1.7vw;
+    font-family: "FranclinGothic";
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+.small_info h1{
+    color: black;
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 2.5vw;
+    font-family: "FranclinGothic";
+}
+/* Конец второй секции */
+
+
+/* Начало третьей секции */
+.aplication{
+    min-height: 10vw;
+    background: transparent;
+    margin: 5vw 0;
+}
+.aplication div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 1vw auto;
+    border-top: 0.2vw solid var(--main-border-color);
+    border-bottom: 0.2vw solid var(--main-border-color);
+    padding: 1vw 0;
+}
+.aplication div p{
+    font-family: "BookAntiqua";
+    font-size: 1.4vw;
+    border-right: 0.2vw solid var(--main-border-color);
+    padding-right: 1vw;
+}
+.aplication div a{
+    font-family: "BookAntiqua";
+    color: red;
+    font-size: 1.4vw;
+    transition: 0.4s;
+}
+.aplication div a:hover{
+    text-decoration: underline;
+}
+/* Конец третьей секции */
+
+
+/* OPEN FOOTER*/
+footer{
+    width: 55.4%;
+    display: flex;
+    padding-left: 10%;
+    padding-bottom: 1vw;
+    justify-content: space-between;
+}
+.logotip{
+    width: 5vw;
+    margin-bottom: 1vw;
+}
+footer div p{
+    font-family: "BookAntiqua";
+    font-size: 1.1vw;
+    margin-right: 1vw;
+}
+footer div ul{
+    display: flex;
+}
+footer div ul li{
+    display: flex;
+    flex-direction: column;
+}
+.first_li_footer{
+    margin-left: 30%;
+}
+.p_footer{
+    margin-bottom: 1vw;
+}
+footer div ul li p{
+    font-family: "BookAntiqua";
+    margin-bottom: 0.2vw;
+}
+footer div ul li a{
+    font-family: "BookAntiqua";
+    margin-bottom: 0.2vw;
+    font-size: 1.1vw;
+
+}
+.inst{
+    width: 1.5vw;
+}
+/*CLOSE FOOTER*/

@@ -12,6 +12,7 @@
 </head>
 <body>
     <section>
+        <a class="go_back" href="/index.html">Вернуться на Главную</a>
         <button onclick="click2()" id="btn1" class="click2"></button>
         <form action="../functions/reg.php" method="POST" id="form1" class="signup">
             <h2>Регистрация</h2>
@@ -22,7 +23,7 @@
             <input type="password" name="password_confirm" placeholder="Повторите пароль" >
             <button type="submit">Отправить</button>
             <p>Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь
-                с политикой конфиденциальности
+                с <a href="/politica.html">политикой конфиденциальности</a> 
             </p>
             <?php 
                 if (isset($_SESSION['message_reg'])){
@@ -38,7 +39,7 @@
             <input type="password" id="input" name="password" placeholder="Пароль" required>
             <button>Войти</button>
             <p>Нажимая на кнопку "Войти", вы даете согласие на обработку персональных данных и соглашаетесь
-                с политикой конфиденциальности
+                с <a href="/politica.html">политикой конфиденциальности</a> 
             </p>
         </form>
     </section>

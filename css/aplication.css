@@ -41,8 +41,62 @@ body::-webkit-scrollbar {
   }
 
 /* Начало первой секции*/
+
+/* Навигация */
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vw;
+    width: 85%;
+    z-index: 2;
+    margin: 0 auto;
+}
+header ul li{
+    margin: auto 0;
+    min-width: 20%;
+    z-index: 2;
+    font-size: 1.3vw;
+    font-family: 'BookAntiqua';
+}
+.first_li{
+    display: flex;
+    flex-direction: row;
+}
+.first_li p{
+    margin-top: 0.5vw;
+    font-family: "BookAntiqua";
+    font-size: 1.3vw;
+    margin-left: 0.9vw;
+}
+header ul li img{
+    height: 3vw;
+    z-index: 2;
+    margin-top: 0.7vw;
+}
+nav{
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+nav ul a{
+    margin: auto 2.5vw;
+    height: 2.3vw;
+    background-image: linear-gradient(white, grey);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    border-radius: 1px;
+    transition: background-size .4s;
+}
+a:hover {
+    background-size: 100% 2px;
+}
 .section_first h1{
-    margin-top: 5%;
     margin-left: 8%;
     font-family: "Franklin Gothic";
     font-size: 2vw;
@@ -222,6 +276,42 @@ body::-webkit-scrollbar {
         padding: 0.3vw 0.3vw;
         border: 1px solid var(--main-border-color);
     }
+}
+.modul_window{
+    width: 15vw;    
+    height: 4vw;
+    position: fixed;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    z-index: 5;
+    left: -20%;
+    top: 10%;
+    opacity: 1;
+}
+.modul_window h1{
+    width: 1vw;
+    height: 1vw;
+    transform: rotate(45deg);
+    margin-left: 14vw;
+    color: black;
+}
+.modul_window h1 a{
+    text-decoration: none;
+    color: #0f5132;
+}
+.modul_window h1 a:hover{
+    cursor: pointer;
+}
+.modul_window p{
+    text-align: center;
+    font-family: "FranclinGothic";
+    font-size: 1vw;
+    color: #0f5132;
+    margin-top: 0.5vw;
+    margin-left: -1vw;    
+}
+.modul_window a{
+    text-decoration-line: underline;
 }
 /*Конец второй секции*/
 

@@ -47,6 +47,18 @@ section{
     padding-top: 14vw;
     display: flex;
 }
+.go_back{
+    width: 15vw;
+    height: 3.5vw;
+    padding-top: 1vw;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    font-family: "FranclinGothic";
+}
 .signup{
     position: relative;
     z-index: 3;
@@ -98,6 +110,9 @@ form p{
     margin-top: 1vw;
     font-family: 'BookAntiqua';
     font-size: 0.8vw;
+}
+form a{
+    text-decoration: underline;
 }
 .signin{
     position: relative;

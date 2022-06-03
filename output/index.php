@@ -14,8 +14,9 @@
     <header>
         <div></div> <!-- блок для затемнения-->
         <ul>
-            <li>
+        <li class="first_li">
                 <img src="/picture/лого.png" alt="No Ethernet connection">
+                <p>Merc <br> Drive</p>
             </li>
             <li>
                 <nav>
