@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -46,23 +49,29 @@
         <div>
             <h2>Оставьте заявку</h2>
             <p>Заполните форму, и менеджер позвонит вам в течении 15 минут</p>
-            <form method="POST" action="">
-               <input placeholder="Имя" type="text" required>
-               <input placeholder="Ваш номер телефона" type="text" required>
-               <input placeholder="Коментарий (необезательно)" type="text">
-               <select class="select" size="1" name="Выберите автомобиль" required>
+            <form method="POST" action="../functions/order.php">
+               <input name="name" placeholder="Имя" type="text" required>
+               <input name="phone_num" placeholder="Ваш номер телефона" type="text" required>
+               <input name="comment" placeholder="Коментарий (необезательно)" type="text">
+               <select class="select" size="1" name="Car" required>
                    <option selected disabled>Выберите автомобиль</option>
-                   <option value="G">Mercedes Benz G</option>
-                   <option value="GLC">Mercedes Benz GLC</option>
-                   <option value="E">Mercedes E Class</option>
-                   <option value="A">Mercedes Benz A</option>
-                   <option value="V">Mercedes V Class</option>
-                   <option value="CLS">Mercedes CLS</option>
+                   <option value="Mercedes Benz G">Mercedes Benz G</option>
+                   <option value="Mercedes Benz GLC">Mercedes Benz GLC</option>
+                   <option value="Mercedes E Class">Mercedes E Class</option>
+                   <option value="Mercedes Benz A">Mercedes Benz A</option>
+                   <option value="Mercedes V Class">Mercedes V Class</option>
+                   <option value="Mercedes CLS">Mercedes CLS</option>
                </select> 
                <a href=""><button type="submit">Отправить</button></a>
                <p>Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных
                    и соглашаетесь с политикой конфидециальности
                </p>
+               <?php 
+                if (isset($_SESSION['message_order'])){
+                    echo '<div class="alert alert-danger">' . $_SESSION['message_order'] . '</div>';
+                }
+                unset($_SESSION['message_order']);
+            ?>
             </form>
         </div>
     </section>
@@ -108,9 +117,9 @@
             <ul>
                 <li class="first_li_footer">
                     <p class="p_footer">НАВИГАЦИЯ</p>
-                    <a href="/index.html">Автопарк</a>
-                    <a href="/index.html">Услуги</a>
-                    <a href="/index.html">О нас</a>
+                    <a href="./index.php">Автопарк</a>
+                    <a href="./index.php">Услуги</a>
+                    <a href="./index.php">О нас</a>
                 </li>
                 <li>
                     <p class="p_footer">КОНТАКТЫ</p>

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -21,7 +24,7 @@
                         <a href="#2"><li>Услуги</li></a>
                         <a href="#3"><li>О нас</li></a>
                         <a href="#4"><li>Контакты</li></a>
-                        <a href="/output/sign.php"><li>Войти</li></a>
+                        <a href="/output/profile.php"><li><?=$_SESSION['user']['login']?></li></a>
                     </ul>
                 </nav>
             </li>
@@ -146,19 +149,12 @@
                     </div>
                 </li>
             </ul>
-            <a href="" id="btn" class="btn animated-button thar-three"><p>Оставить заявку</p></a> 
-            <div class="modul"></div>
-            <div class="modul_window">
-                <p>
-                Чтобы оставить заявку <a href="/output/sign.php">зарегистрируйтесь</a>
-            </p>
-            </div>
+            <a href="/output/aplication.php" id="btn" class="btn animated-button thar-three"><p>Оставить заявку</p></a> 
         </section>
         <section class="professional">
             <h1 class="first_h1">MERC DRIVE - ЭТО КОМАНДА ПРОФЕССИОНАЛОВ</h1>
             <h1 id="3" class="second_h1">ВЫСОКОГО УРОВНЯ</h1>
-            <ul>+
-                
+            <ul>
                 <li>
                     <img id="profimg" src="/picture/professionalfirst.png" alt="">
                 </li>
@@ -179,7 +175,7 @@
                     <p>Оставьте ваш номер телефона, оператор свяжется и уточнит, на какой случай вам нужен автомобиль премиум-класса с личным водителем. Возможно, мы найдем для вас решение, которое не указано на сайте. У нашей команды многолетний опыт работы в этой отрасли, мы сделаем все возможное, чтобы помочь вам.</p>
                 </li>
             </ul>
-            <a href="/output/aplication.html" id="btn2" class="btn animated-button thar-three"><p>Свяжитесь со мной</p></a> 
+            <a href="/output/aplication.php" id="btn2" class="btn animated-button thar-three"><p>Свяжитесь со мной</p></a> 
         </section>
     </main>
     <footer>

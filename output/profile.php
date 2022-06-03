@@ -11,6 +11,7 @@
 </head>
 <body>
     <p><?=$_SESSION['user']['login']?></p>
+    <a href="./index.php">На главную</a>
     <a href="../functions/logout.php">Выход</a>
 </body>
 </html>
