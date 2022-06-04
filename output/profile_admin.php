@@ -56,7 +56,7 @@ if(!$_SESSION['admin']){
                 <p class="phone">Номер телефона: <?=$row['phone_num']?></p>
                 <p class="comment">Коментарий: <?=$row['comment']?></p>
                 <p class="car">Автомобиль: <?=$row['car']?></p>
-                <a href="/functions/delete_aplication.php">Удалить</a>
+                <a href="/functions/delete_aplication.php?id=<?=$row['id']?>">Удалить</a>
             </div>
             <?php
         }
