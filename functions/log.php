@@ -27,7 +27,8 @@
             "name" => $user['name'],
             "login" => $user['login'],
             "email" => $user['email'],
-            "avatar" => $user['avatar']
+            "phone_num" => $user['phone_num'],
+            "city" => $user['city']
         ];
         header("Location: ../output/profile.php");
         }        

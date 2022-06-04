@@ -50,20 +50,34 @@
                     <li>Имя: <?=$_SESSION['user']['name']?></li>
                     <li>Логин: <?=$_SESSION['user']['login']?></li>
                     <li>E-mail: <?=$_SESSION['user']['email']?></li>
-                    <li>Номер:</li>
-                    <li>Город:</li>
+                    <li>Номер: <?
+                        if($_SESSION['user']['phone_num'] == NULL){
+                            echo 'Не указан';
+                        }
+                        else{
+                            echo $_SESSION['user']['phone_num'];
+                        }
+                    ?></li>
+                    <li>Город: <?
+                        if($_SESSION['user']['city'] == NULL){
+                            echo 'Не указан';
+                        }
+                        else{
+                            echo $_SESSION['user']['city'];
+                        }
+                    ?></li>
                 </ul>
             </div>
         </div>
         <div id="img-2">
             <img class="img_2" src="/picture/Vector.png" alt="">
             <div class="img_div_2">
-                <form action="" method="POST">
-                    <input name="name" placeholder="Имя" type="text">
-                    <input name="login" placeholder="Логин" type="text">
-                    <input name="email" placeholder="E-mail" type="email">
-                    <input name="phone_num" placeholder="Номер телефона" type="text">
-                    <input name="city" placeholder="Город" type="text">
+                <form action="../functions/change_profile.php" method="POST">
+                    <input name="name" placeholder="Имя" value="<?=$_SESSION['user']['name']?>" type="text">
+                    <input name="login" placeholder="Логин" value="<?=$_SESSION['user']['login']?>" type="text">
+                    <input name="email" placeholder="E-mail" value="<?=$_SESSION['user']['email']?>" type="email">
+                    <input name="phone_num" placeholder="Номер телефона" value="<?=$_SESSION['user']['phone_num']?>" pattern="[0-9]{11}" type="text">
+                    <input name="city" placeholder="Город" maxlength="100" value="<?=$_SESSION['user']['city']?>" type="text">
                     <a class="btn animated-button thar-three"><button type="submit">Сохранить</button></a>
                 </form>
             </div>

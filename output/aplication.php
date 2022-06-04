@@ -68,9 +68,9 @@
             <h2>Оставьте заявку</h2>
             <p>Заполните форму, и менеджер позвонит вам в течении 15 минут</p>
             <form  id="form" method="POST" action="../functions/order.php">
-               <input name="name" placeholder="Имя" type="text" required>
-               <input name="phone_num" placeholder="Ваш номер телефона" type="text" required>
-               <input name="comment" placeholder="Коментарий (необезательно)" type="text">
+               <input name="name" placeholder="Имя" value="<?=$_SESSION['user']['name']?>" type="text" required>
+               <input name="phone_num" placeholder="Ваш номер телефона" value="<?=$_SESSION['user']['phone_num']?>" type="text" required>
+               <input name="comment" placeholder="Коментарий (необезательно)" maxlength="100" type="text">
                <select class="select" size="1" name="Car" required>
                    <option selected disabled>Выберите автомобиль</option>
                    <option value="Mercedes Benz G">Mercedes Benz G</option>
@@ -80,7 +80,17 @@
                    <option value="Mercedes V Class">Mercedes V Class</option>
                    <option value="Mercedes CLS">Mercedes CLS</option>
                </select> 
-               <a><button type="submit">Отправить</button></a>
+               <?
+                if($_SESSION['user']['phone_num'] == NULL && $_SESSION['user']['city'] == NULL){
+                    ?>
+                        <p>Заполните доп информацию в профиле</p>
+                    <?
+                }else{
+                    ?>
+                        <a><button type="submit">Отправить</button></a>
+                    <?
+                }
+               ?>
                <p>Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных
                    и соглашаетесь с политикой конфидециальности
                </p>
